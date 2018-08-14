@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  http:
+    build: .
+    expose:
+      - 80
+      - 443
+    environment:
+      VIRTUAL_HOST: bremmekamp.com,www.bremmekamp.com
+      VIRTUAL_PROTO: https
+      VIRTUAL_PORT: 443
+      DEFAULT_HOST: www.bremmekamp.com
+    restart: always
